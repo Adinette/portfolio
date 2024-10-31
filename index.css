@@ -1,5 +1,6 @@
 :root {
-  --color-primary: #0b0a12;
+  --color-primary: black;
+  --backgroud-color-primary:#006400;
   --color-secondary: #fff;
 }
 
@@ -37,8 +38,8 @@ a {
 }
 
 h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 5rem;
+  font-weight: 900;
 }
 
 h2 {
@@ -79,6 +80,12 @@ label {
   font-weight: 600;
   font-size: 0.875rem;
 }
+
+.last-name{
+  font-weight: 900;
+  font-size: 2rem;
+}
+
 .btn-primary {
   font-size: 1rem;
   text-align: center;
@@ -123,9 +130,9 @@ label {
   font-size: 0.75rem;
   background-color: transparent;
   border: none;
-  border-left: 3px solid;
+  border-left: 3px solid var(--backgroud-color-primary);
   border-radius: 0;
-  border-bottom: 3px solid;
+  border-bottom: 3px solid var(--backgroud-color-primary);
 }
 
 /* header */
@@ -167,6 +174,20 @@ label {
   text-align: center;
   font-size: 1rem;
 }
+.circle-cut {
+  --r: 50px; /* cut size */
+  --d: 100px;
+  position: relative;
+  top: -5rem;
+  right: -4.5rem;
+  padding: 0;
+  z-index: -1;
+  aspect-ratio: 1.2;
+  border-radius: 20px 0 20px 20px;
+  background: var(--backgroud-color-primary);
+  mask: 
+   radial-gradient(var(--r) at bottom,#0000 calc(100% - 1px),#000)intersect,
+   radial-gradient(var(--d) at var(--d),#0000 calc(100% - 1px),#000) calc(-1*var(--d));}
 
 .header-block-custom {
   position: absolute;
@@ -180,8 +201,7 @@ label {
 }
 
 .header-bottom{
-    background-color: #1d1d1d;
-    margin-top: 2.5rem;
+    background-color: var(--backgroud-color-primary);
     padding: 3.374rem 6.375rem;
     color: var(--color-secondary);
 }
@@ -223,19 +243,28 @@ label {
   margin-right: 0.5rem;
 }
 
-.Link{
-  padding: 0.5rem 1.25rem;
-  border-right: 3px solid;
-  border-left: 3px solid;
+.corner-only {
+  --s: 50px; /* size of the corners */
+  border: 6px solid var(--backgroud-color-primary); 
+  padding: 0.5rem;
+  background:  content-box;
+  width: 130px;
+  margin-top: 1rem;
+  text-align: center;
+  display: inline-block;
+  mask: 
+    conic-gradient(#000 0 0) content-box,
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+    0 0/calc(100% - var(--s)) calc(100% - var(--s));
 }
-
-.Link.btn{
-  border-radius: 0;
+.separatorBlack img{
+  filter: brightness(0) saturate(100%) invert(19%) sepia(42%) saturate(4401%) hue-rotate(100deg) brightness(100%) contrast(105%);
 }
 
 .title{
-  border: 6px solid #0b0a12;
+  border: 6px solid var(--backgroud-color-primary);
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .about .card img{
@@ -243,6 +272,7 @@ label {
   position: absolute;
   top: -0.15rem;
   width: 10%;
+  filter: brightness(0) saturate(100%) invert(19%) sepia(42%) saturate(4401%) hue-rotate(100deg) brightness(100%) contrast(105%);
 }
 
 .about .card-subtitle{
@@ -255,8 +285,17 @@ label {
   width: 30%;
 }
 
+.skills .card{
+  text-align: center;
+  padding: 2rem;
+  background-color: transparent;
+  border-color: #006400;
+  border-style: solid;
+  border-width: 2px;
+}
+
 .footer{
-  background-color: var(--color-primary);
+  background-color: var(--backgroud-color-primary);
   color: var(--color-secondary);
 }
 
