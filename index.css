@@ -1,6 +1,6 @@
 :root {
   --color-primary: black;
-  --backgroud-color-primary:#006400;
+  --backgroud-color-primary: #006400;
   --color-secondary: #fff;
 }
 
@@ -25,7 +25,6 @@ img {
 li {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #f4f4f4;
   list-style: none;
   text-decoration: none;
 }
@@ -38,7 +37,7 @@ a {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -48,7 +47,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -81,9 +80,9 @@ label {
   font-size: 0.875rem;
 }
 
-.last-name{
+.last-name {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .btn-primary {
@@ -126,7 +125,7 @@ label {
   text-decoration: none;
 }
 
-.form-control{
+.form-control {
   font-size: 0.75rem;
   background-color: transparent;
   border: none;
@@ -163,8 +162,8 @@ label {
 
 .navbar .navbar-collapse {
   position: absolute;
-  right: 30%;
-  top: 7rem;
+  right: 67%;
+  top: 4rem;
 }
 
 .header-text {
@@ -174,36 +173,29 @@ label {
   text-align: center;
   font-size: 1rem;
 }
+
+.banner {
+  position: absolute;
+  z-index: 1;
+  right: 115px;
+  top: 2rem;
+  color: var(--color-secondary);
+}
 .circle-cut {
   --r: 50px; /* cut size */
   --d: 100px;
   position: relative;
   top: -5rem;
-  right: -4.5rem;
+  right: -0.75rem;
   padding: 0;
   z-index: -1;
   aspect-ratio: 1.2;
   border-radius: 20px 0 20px 20px;
   background: var(--backgroud-color-primary);
-  mask: 
-   radial-gradient(var(--r) at bottom,#0000 calc(100% - 1px),#000)intersect,
-   radial-gradient(var(--d) at var(--d),#0000 calc(100% - 1px),#000) calc(-1*var(--d));}
-
-.header-block-custom {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 0;
-  width: 60%;
-  height: 100%;
-  background-image: url(images/bg.svg);
-  padding: 7rem 1rem 1rem 1rem;
-}
-
-.header-bottom{
-    background-color: var(--backgroud-color-primary);
-    padding: 3.374rem 6.375rem;
-    color: var(--color-secondary);
+  mask: radial-gradient(var(--r) at bottom, #0000 calc(100% - 1px), #000)
+      intersect,
+    radial-gradient(var(--d) at var(--d), #0000 calc(100% - 1px), #000)
+      calc(-1 * var(--d));
 }
 
 .header-form {
@@ -237,61 +229,61 @@ label {
   display: none;
 }
 
-.header-content i{
-  background-color: #C4C4C4;
+.header-content i {
+  background-color: #c4c4c4;
   padding: 0.5rem;
   margin-right: 0.5rem;
 }
 
 .corner-only {
   --s: 50px; /* size of the corners */
-  border: 6px solid var(--backgroud-color-primary); 
+  border: 6px solid var(--backgroud-color-primary);
   padding: 0.5rem;
-  background:  content-box;
+  background: content-box;
   width: 130px;
   margin-top: 1rem;
   text-align: center;
   display: inline-block;
-  mask: 
-    conic-gradient(#000 0 0) content-box,
-    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
-    0 0/calc(100% - var(--s)) calc(100% - var(--s));
+  mask: conic-gradient(#000 0 0) content-box,
+    conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+      calc(100% - var(--s)) calc(100% - var(--s));
 }
 
-.title{
+.title {
   border: 6px solid var(--backgroud-color-primary);
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.about .card img{
+.about .card img {
   left: -1rem;
   position: absolute;
   top: -0.15rem;
   width: 10%;
-  filter: brightness(0) saturate(100%) invert(19%) sepia(42%) saturate(4401%) hue-rotate(100deg) brightness(100%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(19%) sepia(42%) saturate(4401%)
+    hue-rotate(100deg) brightness(100%) contrast(105%);
 }
 
-.about .card-subtitle{
+.about .card-subtitle {
   text-align: start;
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
-.skills-item img{
+.skills-item img {
   width: 30%;
 }
 
-.skills .card{
+.skills .card {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: transparent;
   border-color: #006400;
   border-style: solid;
   border-width: 2px;
 }
 
-.footer{
+.footer {
   background-color: var(--backgroud-color-primary);
   color: var(--color-secondary);
 }
@@ -316,29 +308,17 @@ label {
   .navbar-nav {
     margin-left: 0rem;
   }
-  .header-block-custom::before {
-    content: "";
-    width: 50%;
-    height: 100%;
+  .banner {
     position: absolute;
-    z-index: -1;
-    top: 0;
-    background-image: url(images/bg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    z-index: 1;
+    right: 120px;
+    top: 5rem;
+    color: var(--color-secondary);
   }
 
-  .header-block-custom::after {
-    content: "";
-    width: 50%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    position: absolute;
-    background-color: #1b2223;
+  .circle-cut {
+    right: -4rem;
   }
-
   .header-form {
     margin: 1.5rem 0 3rem auto;
   }
@@ -350,8 +330,8 @@ label {
   }
   .navbar .navbar-collapse {
     position: absolute;
-    right: 55%;
-    top: 7rem;
+    right: 83%;
+    top: 4rem;
   }
 
   .catalogue .card-body .card-description {
@@ -369,6 +349,21 @@ label {
 }
 
 @media (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h3{
+    font-size: 1.5rem;
+  }
+
+  .last-name {
+    font-size: 2rem;
+  }
+  .banner {
+    position: relative;
+    color: #000;
+  }
   .navbar-nav .nav-item {
     margin-left: 1.5rem;
   }
@@ -402,38 +397,21 @@ label {
     top: auto;
   }
 
-  .header-img img {
-    display: block;
-  }
-
-  .header-block-custom {
-    display: flex;
-    background-color: transparent !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-  }
-
-  .header-block-custom::before {
-    content: "";
-    width: 50%;
-    height: 100%;
-    position: absolute;
+  .circle-cut {
+    --r: 50px; /* cut size */
+    --d: 100px;
+    position: relative;
+    top: -5rem;
+    right: -4.5rem;
+    padding: 0;
     z-index: -1;
-    top: 0;
-    background-image: url(images/bg-header.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .header-form {
-    margin: 10rem 0 3rem auto !important;
-  }
-
-  .start h6 {
-    font-weight: 400 !important;
-    margin: 0.75rem 0 1.5rem 0;
-    color: #b9bbbc !important;
-    font-size: 1rem;
+    aspect-ratio: 1.2;
+    border-radius: 20px 0 20px 20px;
+    background: var(--backgroud-color-primary);
+    mask: radial-gradient(var(--r) at bottom, #0000 calc(100% - 1px), #000)
+        intersect,
+      radial-gradient(var(--d) at var(--d), #0000 calc(100% - 1px), #000)
+        calc(-1 * var(--d));
   }
 
   .footer .footer-list {
